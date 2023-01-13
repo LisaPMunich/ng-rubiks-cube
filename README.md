@@ -1,27 +1,26 @@
-# AngularRubiksCube
+# Angular Rubik's Cube
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+## Description of the project
+The Angular Rubik's Cube project is an implementation of the Kodierwürfel (Rubik's Cube) in Angular. The Kodierwürfel is a simple encryption method used to encrypt and decrypt a text based on a secret word. This project aims to simulate the encryption and decryption process of the Kodierwürfel.
 
-## Development server
+## Goals and what I want to learn by implementing it
+The goal of this project is to gain a deeper understanding of the Angular framework, including components, services, directives, and other core concepts. Additionally, I aim to improve my skills in algorithm development, user interaction, debugging and testing, and the UI-framework primeNG.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## User stories
+* As a user, I want to be able to encrypt a message using the Kodierwürfel method.
+* As a user, I want to be able to decrypt a message using the Kodierwürfel method and the secret word.
+* As a user, I want to have an interactive UI that allows me to input my secret word and message.
 
-## Code scaffolding
+## Features
+* Encryption and decryption of messages using the Kodierwürfel method
+* User interaction to input secret word and message
+* Debugging and testing to ensure correct functionality
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## How to run it locally
+* Clone the repository to your local machine.
+* Navigate to the project directory in the terminal.
+* Run the command npm install to install the necessary dependencies.
+* Run the command ng serve to start the development server.
+* Navigate to http://localhost:4200/ in your browser to view the project.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**Note**: This project is still in development and the features mentioned above may not be fully functional yet.
