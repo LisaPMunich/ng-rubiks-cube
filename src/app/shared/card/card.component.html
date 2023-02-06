@@ -1,26 +1,37 @@
-<div>
-  <h1>{{title}}</h1>
-  <div class="field grid">
-    <label for="message" class="col-fixed" style="width:100px">Nachricht</label>
-    <div class="col">
-      <input id="message" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
-    </div>
-  </div>
-  <div class="field grid">
-    <label for="losungswort" class="col-fixed" style="width:100px">Losungswort</label>
-    <div class="col">
-      <input id="losungswort" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
-    </div>
-  </div>
-  // BUTTON TO ENCODE
-  <button type="button" class="text-white bg-primary-500 border-primary-500 px-3 py-2 text-base border-1 border-solid border-round cursor-pointer transition-all transition-duration-200 hover:bg-primary-600 hover:border-primary-600 active:bg-primary-700 active:border-primary-700">Submit</button>
+<p-card [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+    <h1>{{title}}</h1>
+  </ng-template>
+  <ng-template pTemplate="content">
 
-  <div class="field grid">
-    <label for="verschluesselte-nachricht" class="col-fixed" style="width:100px">Verschlüsselte Nachricht</label>
-    <div class="col">
-      <input id="verschluesselte-nachricht" type="text" class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary">
-    </div>
-  </div>
-  // CLEARING FUNCTION
-  <i class="pi pi-spin pi-spinner" style="font-size: 2rem"></i>
-</div>
+    <span class="p-float-label">
+      <textarea id="input" rows="5" cols="30" pInputTextarea [autoResize]="true" [(ngModel)]="input">{{input}}</textarea>
+      <label for="input">Type in your message</label>
+    </span>
+
+    <span class="p-float-label">
+      <input id="losungswort" type="text" pInputText  [(ngModel)]="losungswort">
+      <label for="losungswort">losungswort</label>
+    </span>
+
+    <app-button [label]="title" [icon]="title === 'Encode'? 'pi pi-lock' : 'pi pi-unlock'" (onClick)="handleButtonClick()"
+    ></app-button>
+
+    <span class="p-float-label">
+      <textarea id="output" rows="5" cols="30" pInputTextarea [autoResize]="true" [(ngModel)]="output">{{output}}</textarea>
+      <label for="output">Encoded message</label>
+    </span>
+
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <p-button label="Clear" icon="pi pi-undo" (onClick)="clear()" style="font-size: 2rem"></p-button>
+  </ng-template>
+</p-card>
+
+
+
+
+
+
+
+

@@ -1,5 +1,10 @@
-<div>
-  <h1>{{title}}</h1>
-  <app-encode-card></app-encode-card>
-  <app-decode-card></app-decode-card>
-</div>
+
+<p-card header={{header}} [style]="{width: '100%'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+    <img alt="Cube" src="assets/wurfel.png" [style]="{width: '100px'}">
+  </ng-template>
+  <ng-template pTemplate="content" class="p-grid">
+    <app-encode-card class="field col"></app-encode-card>
+    <app-decode-card class="field col"></app-decode-card>
+  </ng-template>
+</p-card>
