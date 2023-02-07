@@ -3,8 +3,14 @@
   <ng-template pTemplate="header">
     <img alt="Cube" src="assets/wurfel.png" [style]="{width: '100px'}">
   </ng-template>
-  <ng-template pTemplate="content" class="p-grid">
-    <app-encode-card class="field col"></app-encode-card>
-    <app-decode-card class="field col"></app-decode-card>
+  <ng-template pTemplate="content">
+    <div class="grid">
+      <div class="col-6">
+        <app-encode-card></app-encode-card>
+      </div>
+      <div class="col-6">
+        <app-decode-card></app-decode-card>
+      </div>
+    </div>
   </ng-template>
 </p-card>

@@ -11,6 +11,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import {InputTextareaModule} from "primeng/inputtextarea";
 import {InputTextModule} from "primeng/inputtext";
+import {PanelModule} from "primeng/panel";
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {InputTextModule} from "primeng/inputtext";
     ButtonModule,
     CardModule,
     InputTextareaModule,
-    InputTextModule
+    InputTextModule,
+    PanelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

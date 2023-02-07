@@ -1,11 +1,17 @@
-<p-card [style]="{width: '360px'}" styleClass="p-card-shadow">
-  <ng-template pTemplate="header">
-    <h1>{{title}}</h1>
-  </ng-template>
-  <ng-template pTemplate="content">
 
+
+<p-card header={{title}} [style]="{width: '360px'}" styleClass="p-card-shadow">
+
+  <ng-template pTemplate="content">
     <span class="p-float-label">
-      <textarea id="input" rows="5" cols="30" pInputTextarea [autoResize]="true" [(ngModel)]="input">{{input}}</textarea>
+      <textarea id="input"
+                rows="5"
+                cols="30"
+                pInputTextarea [autoResize]="true"
+                [(ngModel)]="input"
+      >
+        {{input}}
+      </textarea>
       <label for="input">Type in your message</label>
     </span>
 
@@ -21,11 +27,12 @@
       <textarea id="output" rows="5" cols="30" pInputTextarea [autoResize]="true" [(ngModel)]="output">{{output}}</textarea>
       <label for="output">Encoded message</label>
     </span>
-
   </ng-template>
+
   <ng-template pTemplate="footer">
     <p-button label="Clear" icon="pi pi-undo" (onClick)="clear()" style="font-size: 2rem"></p-button>
   </ng-template>
+
 </p-card>
 
 
