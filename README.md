@@ -19,9 +19,15 @@ Additionally, I aim to improve my skills in algorithm development, user interact
 
 ## Features
 * Encryption and decryption of messages using the Kodierwürfel method
-* User interaction to input secret word and message
+* User interaction to input message and losungswort (secret word)
 * Copy function to copy encoded message into the decode block
 * Clear function to clear content of decode block
+* Validation and error message for input of losungswort
+
+
+Validation and error message for losungswort (using primeNG error messaging)
+
+<img src="https://user-images.githubusercontent.com/117353352/220917529-24636b86-8471-4c79-b84f-b46237e9dac5.png" alt="error message" width="300"/>
 
 ## How to run it locally
 * Clone the repository to your local machine.
