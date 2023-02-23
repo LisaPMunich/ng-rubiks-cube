@@ -3,7 +3,10 @@
 ## Description of the project
 The Angular Rubik's Cube project is an implementation of the Kodierwürfel (Rubik's Cube) in Angular.
 The Kodierwürfel is a simple encryption method used to encrypt and decrypt a text based on a secret word.
-This project aims to simulate the encryption and decryption process of the Kodierwürfel.
+This project aims to simulate the encryption and decryption process of the Kodierwürfel. The UI of this project was built using the UI-framework PrimeNG and PrimeFlex.
+
+<img src="https://user-images.githubusercontent.com/99111208/220913364-214f65f6-fb04-4781-9aa3-89750a21b46b.png" alt="project image" width="600"/>
+
 
 ## Goals and what I want to learn by implementing it
 The goal of this project is to gain a deeper understanding of the Angular framework, including components, services, directives, and other core concepts.
@@ -17,7 +20,8 @@ Additionally, I aim to improve my skills in algorithm development, user interact
 ## Features
 * Encryption and decryption of messages using the Kodierwürfel method
 * User interaction to input secret word and message
-* Debugging and testing to ensure correct functionality
+* Copy function to copy encoded message into the decode block
+* Clear function to clear content of decode block
 
 ## How to run it locally
 * Clone the repository to your local machine.
