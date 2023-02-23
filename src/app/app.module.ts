@@ -9,9 +9,11 @@ import { FormsModule } from "@angular/forms";
 import { CardComponent } from "./shared/card/card.component";
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import {InputTextareaModule} from "primeng/inputtextarea";
-import {InputTextModule} from "primeng/inputtext";
-import {PanelModule} from "primeng/panel";
+import { InputTextareaModule } from "primeng/inputtextarea";
+import { InputTextModule } from "primeng/inputtext";
+import { PanelModule } from "primeng/panel";
+import { EncodeService } from "./services/encode/encode.service";
+import {MessageModule} from "primeng/message";
 
 
 @NgModule({
@@ -20,7 +22,7 @@ import {PanelModule} from "primeng/panel";
     CardComponent,
     EncodeCardComponent,
     DecodeCardComponent,
-    ButtonComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +31,10 @@ import {PanelModule} from "primeng/panel";
     CardModule,
     InputTextareaModule,
     InputTextModule,
-    PanelModule
+    PanelModule,
+    MessageModule
   ],
-  providers: [],
+  providers: [EncodeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

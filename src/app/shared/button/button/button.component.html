@@ -1,2 +1,23 @@
-<p-button label={{label}} icon={{icon}} (onClick)="click()" style="font-size: 2rem"></p-button>
 
+<div>
+  <button
+    *ngIf="label==='Encode' || 'Decode'"
+    pButton
+    class="p-button-sm"
+    type="button"
+    label={{label}}
+    icon={{icon}}
+    (click)="onClickSubmit()"
+    style="font-size: 2rem">
+  </button>
+
+  <button
+    *ngIf="label==='Clear'"
+    pButton
+    label={{label}}
+    icon={{icon}}
+    (click)="onClickClear()"
+    style="font-size: 2rem">
+  </button>
+
+</div>

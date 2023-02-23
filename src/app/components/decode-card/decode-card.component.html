@@ -1,4 +1,69 @@
-<app-card title="Decode"
-          action="decode"
+<app-card
+  title="Decode"
+>
+  <span class="p-float-label" inputArea>
+    <textarea
+      id="input"
+      rows="5"
+      cols="30"
+      pInputTextarea [autoResize]="true"
+      [(ngModel)]="input"
+      [style]="{width: '100%'}"
+    >{{input}}
+    </textarea>
+    <label for="input">Paste in the encoded message</label>
+  </span>
 
-></app-card>
+  <span class="p-float-label" losungswortInput>
+    <input id="losungswort"
+           type="text"
+           pInputText
+           [(ngModel)]="losungswort"
+           [style]="{width: '100%'}"
+    >
+    <label for="losungswort">losungswort</label>
+  </span>
+
+
+  <p-message
+    *ngIf="showError"
+    severity="error"
+    text="Losungswort may only contain capital letters and spaces."
+    error>
+  </p-message>
+
+  <button
+    submitButton
+    pButton
+    class="p-button"
+    type="button"
+    label="Decode"
+    icon="pi pi-key"
+    (click)="decodeMessage()"
+  ></button>
+
+  <span class="p-float-label" outputArea>
+          <textarea
+            id="output"
+            rows="5"
+            cols="30"
+            pInputTextarea
+            [autoResize]="true"
+            [(ngModel)]="output"
+            [style]="{width: '100%'}"
+          >{{output}}
+          </textarea>
+          <label for="output">Decoded message</label>
+        </span>
+
+  <button
+    cardFooter
+    pButton
+    class="p-button-outlined p-button-warning"
+    label="Clear content"
+    icon="pi pi-undo"
+    (click)="clearText()"
+  ></button>
+</app-card>
+
+

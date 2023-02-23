@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {EncodeService} from "../../services/encode/encode.service";
 
 
 @Component({
@@ -7,5 +8,32 @@ import { Component } from '@angular/core';
   styleUrls: ['./encode-card.component.css']
 })
 export class EncodeCardComponent {
+  @Input() input = '';
+  @Input() output = '';
+  @Input() losungswort = '';
+  @Input() title = '';
+  showError: boolean = false;
+
+  constructor(
+    public encodeService: EncodeService
+  ) {
+  }
+
+
+  copyText(): void {
+    const textField = document.getElementById('output') as HTMLTextAreaElement;
+    textField.select();
+    document.execCommand('copy');
+  }
+
+  encodeMessage() {
+    this.showError = false;
+
+    try {
+      this.output = this.encodeService.encode(this.losungswort, this.input);
+    } catch (exception) {
+      this.showError = true;
+    }
+  }
 
 }

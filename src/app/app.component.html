@@ -1,16 +1,19 @@
 
-<p-card header={{header}} [style]="{width: '100%'}" styleClass="p-card-shadow">
-  <ng-template pTemplate="header">
-    <img alt="Cube" src="assets/wurfel.png" [style]="{width: '100px'}">
-  </ng-template>
-  <ng-template pTemplate="content">
-    <div class="grid">
-      <div class="col-6">
-        <app-encode-card></app-encode-card>
-      </div>
-      <div class="col-6">
-        <app-decode-card></app-decode-card>
+<div>
+  <div class="card" [style]="{width: '100%'}">
+    <span class="flex flex-row justify-content-center">
+      <h1 class="flex align-items-center text-white" [style]="{font: '100%'}">{{header}}</h1>
+      <i class="flex pi pi-box text-white align-items-center pl-4" style="font-size: 3rem"></i>
+    </span>
+    <div class="flex card-container justify-content-center">
+      <div class="grid">
+        <div class="col-6 flex-1">
+          <app-encode-card></app-encode-card>
+        </div>
+        <div class="col-6 flex-1">
+          <app-decode-card></app-decode-card>
+        </div>
       </div>
     </div>
-  </ng-template>
-</p-card>
+  </div>
+</div>

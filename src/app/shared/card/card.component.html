@@ -1,36 +1,32 @@
-
-
 <p-card header={{title}} [style]="{width: '360px'}" styleClass="p-card-shadow">
 
-  <ng-template pTemplate="content">
-    <span class="p-float-label">
-      <textarea id="input"
-                rows="5"
-                cols="30"
-                pInputTextarea [autoResize]="true"
-                [(ngModel)]="input"
-      >
-        {{input}}
-      </textarea>
-      <label for="input">Type in your message</label>
-    </span>
+  <ng-template pTemplate="content ">
+    <div class="grid">
+      <div class="field col-12">
+           <ng-content select="[inputArea]"></ng-content>
+      </div>
 
-    <span class="p-float-label">
-      <input id="losungswort" type="text" pInputText  [(ngModel)]="losungswort">
-      <label for="losungswort">losungswort</label>
-    </span>
+      <div class="field col-12">
+        <ng-content select="[losungswortInput]"></ng-content>
+      </div>
 
-    <app-button [label]="title" [icon]="title === 'Encode'? 'pi pi-lock' : 'pi pi-unlock'" (onClick)="handleButtonClick()"
-    ></app-button>
+      <div class="field col-12">
+        <ng-content select="[error]"></ng-content>
+      </div>
 
-    <span class="p-float-label">
-      <textarea id="output" rows="5" cols="30" pInputTextarea [autoResize]="true" [(ngModel)]="output">{{output}}</textarea>
-      <label for="output">Encoded message</label>
-    </span>
+      <div class="field col-12">
+        <ng-content select="[submitButton]"></ng-content>
+      </div>
+
+      <div class="field col-12 mb-0">
+        <ng-content select="[outputArea]"></ng-content>
+      </div>
+
+    </div>
   </ng-template>
 
   <ng-template pTemplate="footer">
-    <p-button label="Clear" icon="pi pi-undo" (onClick)="clear()" style="font-size: 2rem"></p-button>
+    <ng-content select="[cardFooter]"></ng-content>
   </ng-template>
 
 </p-card>
