@@ -35,5 +35,3 @@ Validation and error message for losungswort (using primeNG error messaging)
 * Run the command npm install to install the necessary dependencies.
 * Run the command ng serve to start the development server.
 * Navigate to http://localhost:4200/ in your browser to view the project.
-
-**Note**: This project is still in development and the features mentioned above may not be fully functional yet.
